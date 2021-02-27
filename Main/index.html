@@ -1,0 +1,176 @@
+﻿<!DOCTYPE html>
+<html lang = "pt-br">
+<head>
+	<meta charset = "UTF-8"/>
+	<title>HOME - FLORES & SHOP </title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<link rel="icon" href="imagens/icon.png">
+</head>
+<body>	
+	<header id="cabecario" >
+		<hgroup id="logo">
+			</br>
+			<h5>(81)4002-8922</h5>
+			<h5>Av. Norte, 369, Recife, PE </h5>
+			<h5>Segunda a Sábado das 8h ás 18h.</h5>
+			<img src= "imagens/logo.png" id ="logo">
+		</hgroup>
+	
+		<div id="contato" align="right" >
+			<a href="https://www.facebook.com/flor&shop" target="_blank"><img src= "imagens/icon1.png" ></a>
+			<a href="https://www.path.com/hflor&shop" target="_blank"><img src= "imagens/icon2.png" ></a>
+			<a href="https://twitter.com/flor&shop" target="_blank"><img src= "imagens/icon3.png" ></a>
+			<a href="https://www.instagram.com/?hl=pt-br/flor&shop" target="_blank"><img src= "imagens/icon4.png" ></a>
+		
+		</div>
+	
+		<fieldset id="login">
+			<B><a href="cadastro.php">CADASTRO </a> | <a href="login.php">LOGIN</a></b>
+		</fieldset>
+			
+
+		<div class="destaque" align="center">
+			<hr class="menu" >
+			<nav id="menu" align="center">
+				<ul >
+					<li><a href="index.html" >Home</a></li>
+					<li><a href="empresa.html">Nossa Visão</a></li>
+					<li><a href="loja.html">Jardim</a></li>
+					<li><a href="contato.php">Contato</a></li>
+				</ul>	
+			</nav>
+		</div>
+	</header>
+
+	<div align="center" id="destaque">
+
+
+	<script language="JavaScript">
+		var bannerAD=new Array();
+		var adNum=0;
+
+
+		bannerAD[0]="imagens/destaque1.png";
+		bannerAD[1]="imagens/destaque2.png";
+		bannerAD[2]="imagens/destaque3.png";
+		bannerAD[3]="imagens/destaque4.png";
+
+
+		var preloadedimages=new Array();
+			for (i=1;i<bannerAD.length;i++){
+				preloadedimages[i]=new Image();
+				preloadedimages[i].src=bannerAD[i];
+			}
+
+		function setTransition(){
+			if (document.all){
+				bannerADrotator.filters.revealTrans.Transition=Math.floor(Math.random()*23);
+				bannerADrotator.filters.revealTrans.apply();
+			}
+		}
+
+		function playTransition(){
+			if (document.all)
+				bannerADrotator.filters.revealTrans.play()
+		}
+
+		function nextAd(){
+			if(adNum<bannerAD.length-1)adNum++;
+			else adNum=0;
+				setTransition();
+				document.images.bannerADrotator.src=bannerAD[adNum];
+				playTransition();
+				theTimer=setTimeout("nextAd()", 5000);
+		}
+
+		function jump2url(){
+			jumpUrl=bannerADlink[adNum];
+			jumpTarget='_self';
+			if (jumpUrl != ''){
+			if (jumpTarget != '')window.open(jumpUrl,jumpTarget);
+			else location.href=jumpUrl;
+			}
+		}
+
+		function displayStatusMsg() { 
+			status=bannerADlink[adNum];
+			document.returnValue = true;
+		}
+	</script>
+
+
+	<BANNERAD>
+		<img src="imagens/destaque.png" name="bannerADrotator" style="filter:revealTrans(duration=3,transition=20)" height= "370px" >
+		<script language="JavaScript">nextAd()</script>
+	</BANNERAD>
+		
+		<ul id="destaque" >
+			<img src= "imagens/entrega.png">
+			<li><a href="index.php"><img src= "imagens/80.png"></a></li>
+			<li><a href="index.php"><img src= "imagens/170.png"></a></li>
+			<li><a href="index.php"><img src= "imagens/171.png"></a></li>
+		</ul>	
+
+	<hr class="style1">
+	
+	<table>
+		<tr>
+			<td>
+				<div class="imagen">
+					<div class="galeria">
+						<a target="_blank" href="imagens/foto1.jpg">
+							<img src= "imagens/foto1.jpg" align="right" class= "imagen" >
+						</a>
+					<b><p>Orquídea</p></b>
+				</div>
+			</div>
+			<td>
+			<td>
+				<div class="imagen">
+					<div class="galeria">
+						<a target="_blank" href="imagens/foto2.jpg">
+							<img src= "imagens/foto2.jpg" align="right" class= "imagen" >
+						</a>
+					<b><p>Flor de Lótus</p></b>
+				</div>
+			</div>
+			<td>
+			<td>
+				<div class="imagen">
+					<div class="galeria">
+						<a target="_blank" href="imagens/foto3.jpg">
+							<img src= "imagens/foto3.jpg" align="right" class= "imagen" >
+						</a>
+					<b><p>Margarida</p></b>
+				</div>
+			</div>
+			<td>
+		<tr>
+	</table>
+	
+	
+	<footer >	
+		<table align="center" id="rodape">
+			<tr>
+				<td >	
+					TalitaFlores@site.com
+				</td>
+				<td>
+					<hr class="linhavertical"> 
+				</td>
+				<td>
+					<address> Macaxeira, Recife - PE </address>
+				</td>
+				<td>
+					<hr class="linhavertical"> 
+				</td>
+				<td>
+					Tel: (81) 34002-8922</br>
+				</td>
+			</tr>
+		</table>
+	</footer> 
+	</br>
+
+</body>
+</html>
